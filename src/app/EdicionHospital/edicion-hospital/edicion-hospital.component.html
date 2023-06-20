@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Edicion hospital</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="">Nombre hospital</label>
+                <input type="text" class="form-control" #caja1 [value]="datosHospital.nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="">Direccion</label>
+                <input type="text" class="form-control" #caja2 [value]="datosHospital.direccion">
+            </div>
+
+            <div class="form-group">
+                <label for="">Telefono</label>
+                <input type="text" class="form-control" #caja3 [value]="datosHospital.telefono">
+            </div>
+            <br>
+            <div class="from-group">
+                <button class="btn btn-success" (click)="GuardarDatos()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
