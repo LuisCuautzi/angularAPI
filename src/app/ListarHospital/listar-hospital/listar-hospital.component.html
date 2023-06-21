@@ -18,9 +18,9 @@
                 <td scope="row">{{h.nombre}}</td>
                 <td scope="row">{{h.direccion}}</td>
                 <td scope="row">{{h.telefono}}</td>
-                <th><button type="button" class="btn btn-success" [routerLink]="['/detallesHospital',h.id]">Detalle</button></th>
-                <th><button type="button" class="btn btn-primary" [routerLink]="['/edicionHospital', h.id]">Editar</button></th>
-                <th><button type="button" class="btn btn-danger btn-xs" (click)="eliminar(h.id)">Eliminar</button></th>
+                <th><button type="button" class="btn btn-success" [routerLink]="['/detallesHospital',h.id]"> <i class="fa-solid fa-circle-info"></i> Detalle</button></th>
+                <th><button type="button" class="btn btn-primary" [routerLink]="['/edicionHospital', h.id]"><i class="fa-solid fa-pen-to-square"></i> Editar</button></th>
+                <th><button type="button" class="btn btn-danger btn-xs" (click)="eliminar(h.id)"><i class="fa-solid fa-trash"></i> Eliminar</button></th>
             </tr>
         </tbody>
     </table>
@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <button type="button" class="btn btn-info" [routerLink]="['/altaHospital']">Agregar Hospital</button>
+                <button type="button" class="btn btn-info" [routerLink]="['/altaHospital']"><i class="fa-solid fa-plus"></i> Agregar Hospital</button>
             </div>
         </div>
     </div>

@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Edicion Medico</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="">Nombre Medico</label>
+                <input type="text" class="form-control" #caja1 [value]="datosMedico.name">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="">Spellido</label>
+                <input type="text" class="form-control" #caja2 [value]="datosMedico.apellido">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="">Celular</label>
+                <input type="text" class="form-control" #caja3 [value]="datosMedico.celular">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="">Especialidad</label>
+                <input type="text" class="form-control" #caja4 [value]="datosMedico.especialidad">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="">Status</label>
+                <input type="text" class="form-control" #caja5 [value]="datosMedico.status">
+            </div>
+            <br>
+            <div class="from-group">
+                <button class="btn btn-success" (click)="GuardarDatos()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

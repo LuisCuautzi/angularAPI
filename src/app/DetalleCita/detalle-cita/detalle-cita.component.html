@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Listado de Citas </h1>
+    <table class="table table-bordered" width="100%" [cellSpacing]="0">
+        <thead>
+            <th scope="col">Id</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Fecha Inicio</th>
+            <th scope="col">Fecha Fin</th>
+            <th scope="col">Paciente</th>
+
+        </thead>
+        <tbody>
+            <tr *ngFor=" let r of CitasByPaciente ">
+                <td scope="row">{{r.id}}</td>
+                <td scope="row">{{r.fecha | date: 'dd-MM-YYYY'}}</td>
+                <td scope="row">{{r.fechaInicio}}</td>
+                <td scope="row">{{r.fechaFin}}</td>
+                <td scope="row">{{r.paciente.nombre}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

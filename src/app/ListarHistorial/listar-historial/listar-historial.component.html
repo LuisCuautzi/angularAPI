@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Historial Medico</h1>
+
+    <table class="table table-bordered" width="100%" [cellSpacing]="0">
+        <thead>
+            <th scope="col">Id</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Diagnostico</th>
+            <th scope="col">Tratamiento</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let r of ResHistorial">
+                <td scope="row">{{r.id}}</td>
+                <td scope="row">{{r.fecha | date: 'dd-MM-YYYY'}}</td>
+                <td scope="row">{{r.diagnostico}}</td>
+                <td scope="row">{{r.tratamiento}}</td>
+                <th><button type="button" class="btn btn-success" [routerLink]="['/detalleHistorial',r.id]"> <i class="fa-solid fa-circle-info"></i> Detalle</button></th>
+                <th><button type="button" class="btn btn-primary" [routerLink]="['/edicionHistorial', r.id]"><i class="fa-solid fa-pen-to-square"></i> Editar</button></th>
+                <th><button type="button" class="btn btn-danger btn-xs" (click)="eliminar(r.id)"><i class="fa-solid fa-trash"></i> Eliminar</button></th>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <button type="button" class="btn btn-info" [routerLink]="['/altaHistorial']"><i class="fa-solid fa-plus"></i> Agregar Historial Medico</button>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

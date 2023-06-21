@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Edicion Historial Medico</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="">Fecha</label>
+                <input type="text" class="form-control" #caja1 [value]="datosHistorial.fecha">
+            </div>
+
+            <div class="form-group">
+                <label for="">Diagnostico</label>
+                <input type="text" class="form-control" #caja2 [value]="datosHistorial.diagnostico">
+            </div>
+
+            <div class="form-group">
+                <label for="">Tratamiento</label>
+                <input type="text" class="form-control" #caja3 [value]="datosHistorial.tratamiento">
+            </div>
+            <br>
+            <div class="from-group">
+                <button class="btn btn-success" (click)="GuardarDatos()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>Listado de Medicos</h1>
+
+    <table class="table table-bordered" width="100%" [cellSpacing]="0">
+        <thead>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Celular</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Estatus</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let m of ResMedico">
+                <td scope="row">{{m.id}}</td>
+                <td scope="row">{{m.name}}</td>
+                <td scope="row">{{m.apellido}}</td>
+                <td scope="row">{{m.celular}}</td>
+                <td scope="row">{{m.especialidad}}</td>
+                <td scope="row">{{m.status == 0 ? 'Disponible' : 'No Disponible'}}</td>
+                <th><button type="button" class="btn btn-success" [routerLink]="['/detalleMedico',m.id]"><i class="fa-solid fa-circle-info"></i> Detalle</button></th>
+                <th><button type="button" class="btn btn-primary" [routerLink]="['/edicionMedico', m.id]"><i class="fa-solid fa-pen-to-square"></i> Editar</button></th>
+                <th><button type="button" class="btn btn-danger btn-xs" (click)="eliminar(m.id)"><i class="fa-solid fa-trash"></i> Eliminar</button></th>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <button type="button" class="btn btn-info" [routerLink]="['/altaMedico']"><i class="fa-solid fa-plus"></i>Agregar Medico</button>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
